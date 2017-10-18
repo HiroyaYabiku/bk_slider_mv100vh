@@ -57,7 +57,6 @@
       // 画面リサイズ時にスライダーの幅を再設定
       $(window).on('resize', function(){
         var $winWidth = $(window).width();
-        var sliderTarget = $('#slider li').width();
         $('#slider li').width($winWidth)
       });
     });
