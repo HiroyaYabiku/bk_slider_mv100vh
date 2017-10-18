@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+
+<head>
+<meta charset="UTF-8">
+<title>【js】背景画面いっぱいにスライダーを表示する方法（ページャー、prev、nextボタン付き）</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body id="top" class="topPage">
+
+
+
+    <section id="mainVisual">
+      <ul id="slider">
+        <li style="background-image:url(./img/mv01.jpg);"></li>
+        <li style="background-image:url(./img/mv02.jpg);"></li>
+        <li style="background-image:url(./img/mv03.jpg);"></li>
+      </ul>
+      <div class="mv-btn">
+        <div id="mv-prev" class="mv-prev"><span></span></div>
+        <div id="mv-next" class="mv-next"><span></span></div>
+      </div>
+    </section>
+
+
+    <section>
+      <p class="contentsText">ここからコンテンツが始まります！</p>
+    </section>
+
+
+    <div class="">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QrR0m0hJ1lU" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.bxslider.js"></script>
+
+
+    <script>
+
+    $(function() {
+
+
+
+
+      // bxSliderを起動
+      $('#slider').bxSlider({
+        mode: 'fade',
+        speed: 1000,
+        pause: 4500,
+        auto: true,
+        pager: true,
+        controls: true,
+        hideControlOnEnd: true,
+        touchEnabled: false
+      });
+
+      // prev , nextのテキストを空に
+      $(window).on('load', function(){
+        $('.bx-prev').text('');
+        $('.bx-next').text('');
+      });
+
+      // 画面リサイズ時にスライダーの幅を再設定
+      $(window).on('resize', function(){
+        var $winWidth = $(window).width();
+        var sliderTarget = $('#slider li').width();
+        $('#slider li').width($winWidth)
+      });
+
+
+    });
+
+    </script>
+</body>
+</html>

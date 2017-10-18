@@ -1,0 +1,269 @@
+
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+
+/*
+ * common
+ * common：全ページ共通のcss。
+ */
+@charset "UTF-8";
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* スライダー
+----------------------------------- */
+#slider li {
+  height: 100vh;
+  background: center/cover no-repeat;
+}
+
+
+/* ページャー
+----------------------------------- */
+.bx-default-pager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  bottom: 40px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.bx-pager-item a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 50%;
+  text-indent: 100%;
+  cursor: pointer;
+}
+/* active時の色 */
+.bx-pager-item .active {
+  background-color: #b63726;
+}
+
+
+/* prev , nextボタン （コントローラー）
+----------------------------------- */
+.bx-prev,
+.bx-next {
+  position: absolute;
+  z-index: 120;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border: 1px solid #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.bx-prev:before,
+.bx-next:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin: auto;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: left;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  content: "";
+}
+.bx-prev:after,
+.bx-next:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  height: 1px;
+  margin: auto;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  content: "";
+}
+.bx-prev:hover:before,
+.bx-next:hover:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+}
+.bx-prev:hover:after,
+.bx-next:hover:after {
+  width: 0;
+  color: #fff;
+  -webkit-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.bx-prev {
+  left: 20px;
+}
+.bx-prev:before {
+  border-right: 0;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.bx-prev:after {
+  left: -10px;
+}
+.bx-next {
+  right: 20px;
+}
+.bx-next:after {
+  right: -10px;
+}
+.bx-next:hover {
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+
+/* text */
+.contentsText {
+  padding: 100px;
+  text-align: center;
+}
