@@ -16,28 +16,20 @@
 <body id="top" class="topPage">
 
 
-
+    <!-- スライダー start -->
     <section id="mainVisual">
       <ul id="slider">
         <li style="background-image:url(./img/mv01.jpg);"></li>
         <li style="background-image:url(./img/mv02.jpg);"></li>
         <li style="background-image:url(./img/mv03.jpg);"></li>
       </ul>
-      <div class="mv-btn">
-        <div id="mv-prev" class="mv-prev"><span></span></div>
-        <div id="mv-next" class="mv-next"><span></span></div>
-      </div>
     </section>
+    <!-- スライダー end -->
 
 
     <section>
       <p class="contentsText">ここからコンテンツが始まります！</p>
     </section>
-
-
-    <div class="">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QrR0m0hJ1lU" frameborder="0" allowfullscreen></iframe>
-    </div>
 
 
     <script src="./js/jquery.js"></script>
@@ -47,9 +39,6 @@
     <script>
 
     $(function() {
-
-
-
 
       // bxSliderを起動
       $('#slider').bxSlider({
@@ -75,8 +64,6 @@
         var sliderTarget = $('#slider li').width();
         $('#slider li').width($winWidth)
       });
-
-
     });
 
     </script>
