@@ -48,14 +48,10 @@
         auto: true,
         pager: true,
         controls: true,
+        prevText: '',
+        nextText: '',
         hideControlOnEnd: true,
         touchEnabled: false
-      });
-
-      // prev , nextのテキストを空に
-      $(window).on('load', function(){
-        $('.bx-prev').text('');
-        $('.bx-next').text('');
       });
 
       // 画面リサイズ時にスライダーの幅を再設定
